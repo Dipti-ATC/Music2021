@@ -29,6 +29,7 @@ namespace Music2021
                 System.Windows.Forms.MessageBox.Show(e.Message);
             }
         }
+        /* Code Optimised
         public DataTable FillDGVOwnerWithOwner()
         {
             //create a datatable
@@ -42,6 +43,40 @@ namespace Music2021
                 Connection.Close();//close the connection
             }
             return dt;//pass the datatable data to the DataGridView
+        }
+         public DataTable FillDGVCDWithCD()
+          {
+              DataTable dt = new DataTable(); //temp table to hold the data
+
+              using (da = new SqlDataAdapter("select * from CD", Connection))
+              {
+                  //connect to DB and get SQL
+                  Connection.Open();
+
+                  da.Fill(dt);
+
+                  Connection.Close();
+
+              }
+              return dt;
+          }*/
+        public DataTable FillDGVs(string TableName)
+        {
+            DataTable dt = new DataTable(); //temp table to hold the data
+
+            string query = "select * from " + TableName;
+
+            using (da = new SqlDataAdapter(query, Connection))
+            {
+                //connect to DB and get SQL
+                Connection.Open();
+
+                da.Fill(dt);
+
+                Connection.Close();
+
+            }
+            return dt;
         }
 
     }

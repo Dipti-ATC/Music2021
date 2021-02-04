@@ -35,7 +35,12 @@ namespace Music2021
 
             try
             {
-                DGVOwner.DataSource = myDatabase.FillDGVOwnerWithOwner();//pass the datatable to the data grid view
+                //pass the datatable to the data grid view
+                DGVOwner.DataSource = myDatabase.FillDGVs("Owner");
+                DGVOwner.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
+
+                DGVCd.DataSource = myDatabase.FillDGVs("CD");
+                DGVCdTracks.DataSource = myDatabase.FillDGVs("CDTracks");
             }
             catch(Exception ex)
             {
