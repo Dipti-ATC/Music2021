@@ -37,6 +37,7 @@ namespace Music2021
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.DGVOwner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCdTracks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCd)).BeginInit();
@@ -86,10 +87,11 @@ namespace Music2021
             this.Menu.Controls.Add(this.tabPage1);
             this.Menu.Controls.Add(this.tabPage2);
             this.Menu.Controls.Add(this.tabPage3);
-            this.Menu.Location = new System.Drawing.Point(12, 12);
+            this.Menu.Controls.Add(this.tabPage4);
+            this.Menu.Location = new System.Drawing.Point(41, 22);
             this.Menu.Name = "Menu";
             this.Menu.SelectedIndex = 0;
-            this.Menu.Size = new System.Drawing.Size(686, 268);
+            this.Menu.Size = new System.Drawing.Size(652, 321);
             this.Menu.TabIndex = 4;
             // 
             // tabPage1
@@ -99,7 +101,7 @@ namespace Music2021
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(678, 242);
+            this.tabPage1.Size = new System.Drawing.Size(678, 295);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Owner";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -110,7 +112,7 @@ namespace Music2021
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(678, 242);
+            this.tabPage2.Size = new System.Drawing.Size(678, 295);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "CD";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -121,10 +123,20 @@ namespace Music2021
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(678, 242);
+            this.tabPage3.Size = new System.Drawing.Size(678, 295);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "CDTracks";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(644, 295);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Popular Methods";
             // 
             // Form1
             // 
@@ -153,10 +165,11 @@ namespace Music2021
         private System.Windows.Forms.Label lblOwner;
         private System.Windows.Forms.DataGridView DGVCdTracks;
         private System.Windows.Forms.DataGridView DGVCd;
-        private System.Windows.Forms.TabControl Menu;
+        private new System.Windows.Forms.TabControl Menu;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
 

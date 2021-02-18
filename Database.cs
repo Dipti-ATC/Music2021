@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Music2021
 {
-    class Database
+    public class Database
     {
         //Create Connection , Command and an Adapter
         private SqlConnection Connection = new SqlConnection();
@@ -60,6 +60,10 @@ namespace Music2021
               }
               return dt;
           }*/
+        public string CheckDB()
+        {
+            return Connection.Database;
+        }
         public DataTable FillDGVs(string TableName)
         {
             DataTable dt = new DataTable(); //temp table to hold the data
